@@ -74,3 +74,9 @@ Imagem da solução no Tinkercad:
 - Verifique as conexões físicas dos sensores e do servo motor ao Arduino.
 - Se os dados não estiverem aparecendo, verifique se o Node-RED está recebendo os dados corretamente do Arduino.
 Se o servo não estiver respondendo aos comandos, verifique se a porta serial está configurada corretamente e se as conexões estão corretas.
+
+## Fluxo
+
+
+
+## Dashboard
