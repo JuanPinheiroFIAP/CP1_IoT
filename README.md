@@ -75,6 +75,11 @@ Imagem da solução no Tinkercad:
 - Se os dados não estiverem aparecendo, verifique se o Node-RED está recebendo os dados corretamente do Arduino.
 Se o servo não estiver respondendo aos comandos, verifique se a porta serial está configurada corretamente e se as conexões estão corretas.
 
+## Circuito
+
+![image](https://github.com/user-attachments/assets/985e6709-f12c-4234-ba1d-ee4cbb6b438f)
+
+
 ## Fluxo
 
 
