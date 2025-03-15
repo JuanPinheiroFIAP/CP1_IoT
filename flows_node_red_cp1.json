@@ -1,0 +1,270 @@
+[
+    {
+        "id": "9160a2488030544c",
+        "type": "tab",
+        "label": "Controle de Sensores e Servo",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "24f1ad5eb420b2bc",
+        "type": "serial in",
+        "z": "9160a2488030544c",
+        "name": "Entrada Dados(COM4)",
+        "serial": "7675df929b0f30fc",
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "9430cb97cf3d30fc"
+            ]
+        ]
+    },
+    {
+        "id": "9430cb97cf3d30fc",
+        "type": "json",
+        "z": "9160a2488030544c",
+        "name": "JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "525902f41ab929d0",
+                "f34fef4240a89b41",
+                "e6343a72d8e8a1c1",
+                "f199c39a7310eff7"
+            ]
+        ]
+    },
+    {
+        "id": "525902f41ab929d0",
+        "type": "ui_gauge",
+        "z": "9160a2488030544c",
+        "name": "Temperatura F",
+        "group": "3279aafc3e88b28c",
+        "order": 1,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°F",
+        "format": "{{msg.payload.temperatura}}",
+        "min": 0,
+        "max": 150,
+        "colors": [
+            "#7de1e8",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": 50,
+        "seg2": 100,
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f34fef4240a89b41",
+        "type": "ui_gauge",
+        "z": "9160a2488030544c",
+        "name": "Umidade",
+        "group": "3279aafc3e88b28c",
+        "order": 2,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{msg.payload.umidade}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#e8814a",
+            "#00e62e",
+            "#98cb3a"
+        ],
+        "seg1": 50,
+        "seg2": 80,
+        "x": 700,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e6343a72d8e8a1c1",
+        "type": "ui_gauge",
+        "z": "9160a2488030544c",
+        "name": "Luminosidade",
+        "group": "3279aafc3e88b28c",
+        "order": 3,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Luminosidade",
+        "label": "",
+        "format": "{{msg.payload.luminosidade}}",
+        "min": 0,
+        "max": 1023,
+        "colors": [
+            "#7de1e8",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": 300,
+        "seg2": 700,
+        "x": 700,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fc68d1287cafa8c0",
+        "type": "ui_button",
+        "z": "9160a2488030544c",
+        "name": "Servo 0°",
+        "group": "3279aafc3e88b28c",
+        "order": 4,
+        "width": "7",
+        "height": "2",
+        "passthru": false,
+        "label": "Servo 0°",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "servo",
+        "x": 250,
+        "y": 400,
+        "wires": [
+            [
+                "e4a03246b4590ec9"
+            ]
+        ]
+    },
+    {
+        "id": "0c22b9e0621b9ae3",
+        "type": "ui_button",
+        "z": "9160a2488030544c",
+        "name": "Servo 90°",
+        "group": "3279aafc3e88b28c",
+        "order": 5,
+        "width": "7",
+        "height": "2",
+        "passthru": false,
+        "label": "Servo 90°",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "str",
+        "topic": "servo",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "e4a03246b4590ec9"
+            ]
+        ]
+    },
+    {
+        "id": "b9c75d241879cf24",
+        "type": "ui_button",
+        "z": "9160a2488030544c",
+        "name": "Servo 180°",
+        "group": "3279aafc3e88b28c",
+        "order": 6,
+        "width": "7",
+        "height": "2",
+        "passthru": false,
+        "label": "Servo 180°",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "3",
+        "payloadType": "str",
+        "topic": "servo",
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "e4a03246b4590ec9"
+            ]
+        ]
+    },
+    {
+        "id": "e4a03246b4590ec9",
+        "type": "serial out",
+        "z": "9160a2488030544c",
+        "name": "Saida Servos(COM4)",
+        "serial": "7675df929b0f30fc",
+        "x": 500,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "f199c39a7310eff7",
+        "type": "debug",
+        "z": "9160a2488030544c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7675df929b0f30fc",
+        "type": "serial-port",
+        "name": "COM4",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "3279aafc3e88b28c",
+        "type": "ui_group",
+        "name": "Sensores",
+        "tab": "af688afcefdf4abb",
+        "order": 1,
+        "disp": true,
+        "width": "21",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "af688afcefdf4abb",
+        "type": "ui_tab",
+        "name": "Sensores",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
